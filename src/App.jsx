@@ -1,28 +1,24 @@
-import { useState } from "react"
+import { useState } from "react";
 
 function App() {
-  const [text, setText] = useState("Ibrahim");
+  const [text, setText] = useState("Halo");
 
-  function gantiNama() {
-    if (text === "Ibrahim") {
-      setText("Dunia");
+  function ganti() {
+    if (text=== "Halo") {
+      setText("Hai");
     } else {
-      setText("Ibrahim");
+      setText("Halo")
     }
   }
 
   return (
     <div>
-      <h1>Hello {text}</h1>
-      <button onClick={gantiNama}>
-        Klik aku
-      </button>
-     <br />
-      <button onClick={() => setText("Keren!")}>
-        Jadi keren
-      </button>
+    <h1>{text}</h1>
+    <button onClick={ganti}>
+      ubah
+    </button>
     </div>
-  );
+  )
 }
 
 export default App;
